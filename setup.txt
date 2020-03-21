@@ -1,0 +1,76 @@
+安装shutter、cutecom、minicom、SMPlayer、tree、git、cmake、ssh
+安装emmctool工具的库文件
+设置串口权限：
+
+-----------------------
+常用插件安装
+==================================================================
+1、serial port
+   1) Install cutecom:sudo apt-get install cutecom
+   2) Install minicom:sudo apt-get install minicom
+--------------------------------------------------
+   Configuration:   
+       serial port setup-->
+            A - Serial Device         :/dev/ttyUSB0
+            F - Hardware Flow Control : NO
+       Save setup as dfl
+--------------------------------------------------
+   Serial permission setup:
+       1) sudo gedit /etc/udev/rules.d/70-ttyusb.rules
+       2) write content:
+              KERNEL=="ttyUSB[0-9]*", MODE="0666"
+==================================================================  
+2、Install SMPlayer:
+   1) sudo apt-add-repository ppa:rvm/smplayer
+   2) sudo apt-get update
+   3) sudo apt-get install smplayer smplayer-skins smplayer-themes
+==================================================================
+3、Install ssh server
+    1) Install: sudo -apt-get install openssh-server
+    2) Confirm whether to start: ps -e | grep ssh
+==================================================================
+4、Install git:
+   1) sudo apt-get install git
+   2) configure:
+        Reference website:Git简介 - 廖雪峰的官方网站
+==================================================================
+5、Install cmake:
+   sudo apt-get install cmake
+==================================================================
+6、Install tree
+   sudo apt-get install tree
+==================================================================
+7、Install shutter
+   1) sudo apt-get update
+   2) sudo apt-get install shutter
+----------------------------------
+   Shortcut setup:
+       1) 系统设置-->键盘-->快捷键-->自定义快捷键-->+
+       2) 名称：Shutter Select 命令：shutter -s 并应用，重新设置快捷键：Ctrl+Alt+X
+==================================================================
+8、Install remarkable:
+   1) sudo dkpg -i remarkable-name
+   2) sudo apt-get -f install
+==================================================================
+9、Install FoxitReader
+   1) ./FoxitReader.enu.setup.2.4.4.0911\(r057d814\).x64.run 
+==================================================================
+10、Install WPS
+    1) sudo dpkg -i wps-office_11.1.0.8865_amd64.deb 
+    2) Fonts setup:
+        复制缺失字体至目录：/usr/share/fonts/wps-office
+==================================================================
+
+==================================================================
+
+==================================================================
+
+==================================================================
+
+==================================================================
+
+==================================================================
+
+==================================================================
+
+==================================================================
