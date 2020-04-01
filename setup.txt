@@ -51,6 +51,12 @@
 8、Install remarkable:
    1) sudo dkpg -i remarkable-name
    2) sudo apt-get -f install
+   -----------------------------------
+   Install Typora----Address:https://www.typora.io/:
+   1) wget -qO - https://typora.io/linux/public-key.asc | sudo apt-key add -
+   2) sudo add-apt-repository 'deb https://typora.io/linux ./'
+   3) sudo apt-get update
+   4) sudo apt-get install typora
 ==================================================================
 9、Install FoxitReader
    1) ./FoxitReader.enu.setup.2.4.4.0911\(r057d814\).x64.run 
