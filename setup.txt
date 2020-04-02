@@ -66,6 +66,11 @@
     2) Fonts setup:
         复制缺失字体至目录：/usr/share/fonts/wps-office
 ==================================================================
+11、Install goole-chrome
+   1) download .deb file
+   2) sudo apt-get install libappindicator1 libindicator7
+   3) sudo dpkg -i google-chrome-stable_current_amd.deb
+   4) sudo apt-f install
 
 ==================================================================
 
