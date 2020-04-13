@@ -13,7 +13,7 @@
 
 
 5、build目录下编译：cmake -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/usr/local -D OPENCV_EXTRA_MODULES_PATH=~/software/opencv/opencv_contrib/modules ..
-cmake -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/usr/local -D OPENCV_ENABLE_NONFREE=ON -D WITH_OPENMP=ON -D OPENCV_EXTRA_MODULES_PATH=~/software//opencv/opencv_contrib/modules ..
+cmake -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/usr/local -D OPENCV_ENABLE_NONFREE=ON -D WITH_OPENMP=ON -D OPENCV_EXTRA_MODULES_PATH=~/software/opencv/opencv_contrib/modules ..
 注意：opencv_contrib的路径要根据实际安装位置调整
 -----------------------------------------------------------------------
 编译正确的表现：
@@ -83,4 +83,17 @@ And then run cmake again, and make. Hope this help
 
 参考链接：https://blog.csdn.net/u011736771/article/details/85960300
 https://github.com/opencv/opencv_contrib/issues/1301
+
+
+##问题3 : opencv_contrib/modules/xfeatures2d/test/test_features2d.cpp:51:10行 fatal error:features2d/test/test_detectors_regression.impl.hpp没有那个文件或目录
+ #include "features2d/test/test_detectors_regression.impl.hpp"
+解决方法：cpp中对应的头文件如下：
+#include "features2d/test/test_detectors_regression.impl.hpp"
+#include "features2d/test/test_descriptors_regression.impl.hpp"
+改为：
+#include "../modules/features2d/test/test_detectors_regression.impl.hpp"
+#include "../modules/features2d/test/test_descriptors_regression.impl.hpp"
+只是头文件位置错误，出现其他同样的也可以参考改了之后再make. 另外一个cpp也需要改的是test_rotation_and_scale_invariance.cpp，将hpp位置改一下：
+#include "../modules/features2d/test/test_detectors_invariance.impl.hpp" // main OpenCV repo
+#include "../modules/features2d/test/test_descriptors_invariance.impl.hpp" // main OpenCV repo
 
