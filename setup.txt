@@ -73,6 +73,15 @@
    4) sudo apt-f install
 
 ==================================================================
+12、Install codeblocks
+  1> latest version
+    1）sudo add-apt-repository ppa:codeblocks-devs/release
+    2）sudo apt-get update
+    3）sudo apt-get install codeblocks codeblocks-contrib
+  2> stable version
+    1）sudo add-apt-repository ppa:damien-moore/codeblocks-stable
+    2）sudo apt-get update
+    3）sudo apt-get install codeblocks codeblocks-contrib
 
 ==================================================================
 
